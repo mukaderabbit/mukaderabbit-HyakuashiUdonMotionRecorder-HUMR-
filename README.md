@@ -1,0 +1,2 @@
+# mukaderabbit-HyakuashiUdonMotionRecorder-HUMR-
+VRChat上での動きをHumanoidAnimationとして出力します
