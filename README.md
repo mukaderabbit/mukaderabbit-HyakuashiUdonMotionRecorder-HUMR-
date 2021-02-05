@@ -1,2 +1,88 @@
-# mukaderabbit-HyakuashiUdonMotionRecorder-HUMR-
-VRChat上での動きをHumanoidAnimationとして出力します
+# HyakuashiUdonMotionRecorder-HUMR-
+VRChat上での動きをHumanoidAnimationに出力します
+
+ 
+
+### 確認済み動作環境
+
+* Unity 2018.4.20.f1
+* VRCSDK3-WORLD-2020.12.09.04.44_Public
+* UdonSharp_v0.19.0
+* FBX Exporter Version 3.2.1
+
+ 
+
+### ダウンロード
+[こちら](https://github.com/mukaderabbit/HyakuashiUdonMotionRecorder-HUMR-/releases/)
+
+内容物
+
+- HUMR_Recorder
+  - ReadMe(Recorder).txt
+  - Recorder.prefab
+  - SampleScene.scene
+  - Recorder Udon C# Program Asset.asset
+  - HUMR.Recorder.cs
+- HUMR_OutputLogLoader
+  - ReadMe(OutputLogLoader).txt
+  - OutputLogLoader.cs
+  - OutputLogLoaderEditor.cs
+  - HUMRImportFBXSettings
+  
+   
+  
+### 導入の手順(Recorder)
+
+VRCSDK3-WorldとUdonSharpをImportしたのちに、RecorderのunitypackageをImportしてください。
+
+Assets\HUMR\Prefabs\Recorder.prefabをワールドSceneのHierarchyに設置してください。
+
+そのワールドをアップロード(またはLocalTest)してワールドに入りログを残します。
+
+VRChatを終了するとC:\Users\username\AppData\LocalLow\VRChat\VRChat\の下にoutput_log_xx-xx-xx.txtが作成されます。
+
+これによってOutputLogLoaderを利用する準備が整いました。
+
+ 
+
+### 導入の手順(OutputLogLoader)
+
+PackageManagerからFBXExporterをInstallしたのちに、OutputLogLoaderのunitypackageをImportしてください。
+
+レコードの際に使用したアバターprefabをHierarchyに移動させ、Assets\HUMR\Scripts\Csharp\OutputLogLoader.csをアタッチします。
+
+アニメーションを作成したい人のDisplayNameを打ち込み、最新(レコード時)のoutput_log_xx-xx-xx.txtの”_xx-xx-xx”を選択します。
+
+下にあるLoadLogToExportAnimと書かれたボタンを押します。
+
+Assets\HUMR\FBXs\DisplayName\の下にHumanoidAnimationが出力されます。
+
+ 
+
+### License
+
+MIT License
+
+Copyright (c) 2021 mukaderabbit
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+
+
