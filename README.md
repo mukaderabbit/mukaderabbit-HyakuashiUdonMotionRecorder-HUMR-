@@ -29,7 +29,8 @@ VRChat上での動きをHumanoidAnimationに出力します
   - OutputLogLoaderEditor.cs
   - HUMRImportFBXSettings
   
-   
+### 導入の手順（動画解説）
+   https://youtu.be/k_h762DME_U
   
 ### 導入の手順(Recorder)
 
