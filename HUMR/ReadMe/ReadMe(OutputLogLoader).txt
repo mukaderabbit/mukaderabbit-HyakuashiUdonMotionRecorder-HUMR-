@@ -8,6 +8,11 @@ PackageManagerからFBXExporterをInstallしたのちに、OutputLogLoaderのuni
 Assets\HUMR\FBXs\DisplayName\の下にHumanoidAnimationが出力されます。
 
 
+更新履歴
+
+v1.0(2021/02/07) リリース
+v1.1(2021/02/08) Quaternion補間が行われていない不具合を修正 
+
 
 MIT License
 
