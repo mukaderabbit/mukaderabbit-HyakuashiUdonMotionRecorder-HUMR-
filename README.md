@@ -9,7 +9,7 @@ VRChat上での動きをHumanoidAnimationに出力します
 * VRCSDK3-WORLD-2020.12.09.04.44_Public
 * UdonSharp_v0.19.0
 * FBX Exporter Version 3.2.1
-
+* VRChat 2020.1.2
  
 
 ### ダウンロード
