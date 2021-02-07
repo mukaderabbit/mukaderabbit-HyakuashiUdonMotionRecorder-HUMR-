@@ -1,4 +1,4 @@
-﻿
+
 /*******
  * OutputLogLoader.cs
  * 
@@ -148,10 +148,6 @@ namespace HUMR
                                     continue;
                                 }
                                 Quaternion localrot = animator.GetBoneTransform((HumanBodyBones)k).localRotation;
-                                if (k==0 && localrot.w < 0)//localrot.w=1,-1遷移時のノイズを抑える目的でlocalrot.w>＝0しか許容しない。hipのみ。handとfootもやった方がいいかも？
-                                {
-                                    localrot = new Quaternion(-localrot.x, -localrot.y, -localrot.z, -localrot.w);
-                                }
                                 Keyframes[k * 4 + 3][nTargetLineCounter] = new Keyframe(key_time, localrot.x);
                                 Keyframes[k * 4 + 4][nTargetLineCounter] = new Keyframe(key_time, localrot.y);
                                 Keyframes[k * 4 + 5][nTargetLineCounter] = new Keyframe(key_time, localrot.z);
@@ -196,6 +192,7 @@ namespace HUMR
                     clip.SetCurve(GetHierarchyPath(animator.GetBoneTransform((HumanBodyBones)m)),
                         typeof(Transform), "localRotation.w", AnimCurves[m * 4 + 6]);
                 }
+                clip.EnsureQuaternionContinuity();//これをしないとQuaternion補間してくれない
             }
 
             //GenericAnimation出力
@@ -231,11 +228,11 @@ namespace HUMR
                 CreateDirectoryIfNotExist(exportFolderPath);
                 string displaynameFBXFolderPath = exportFolderPath + "/" + DisplayName;
                 CreateDirectoryIfNotExist(displaynameFBXFolderPath);
-                
+
                 UnityEditor.Formats.Fbx.Exporter.ModelExporter.ExportObject(displaynameFBXFolderPath + "/" + clip.name, this.gameObject);
             }
         }
-        
+
         void ControllerSetUp(string humrPath)
         {
             string tmpAniConPath = humrPath + @"/AnimationController";
