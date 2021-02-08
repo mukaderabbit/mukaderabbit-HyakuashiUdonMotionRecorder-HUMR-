@@ -59,6 +59,11 @@ namespace HUMR
                     MIclip.keepOriginalPositionY = true;
                     //MIclip.lockRootPositionXZ = true;
                     //MIclip.keepOriginalPositionXZ = true;
+                    
+                    if (MIclip.name == "")
+                    {
+                        MIclip.name = "HUMRAnimation";
+                    }
                 }
                 importer.clipAnimations = MIclips;
 
