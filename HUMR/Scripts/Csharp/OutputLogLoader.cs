@@ -241,7 +241,7 @@ namespace HUMR
                 CreateDirectoryIfNotExist(tmpAniConPath);
                 controller = UnityEditor.Animations.AnimatorController.CreateAnimatorControllerAtPath(tmpAniConPath + "/TmpAniCon.controller");
             }
-            else if (AssetDatabase.GetAssetPath(controller) == tmpAniConPath + "/TmpAniCon")
+            else if (AssetDatabase.GetAssetPath(controller) == tmpAniConPath + "/TmpAniCon.controller")
             {
                 foreach (var layer in controller.layers)
                 {
