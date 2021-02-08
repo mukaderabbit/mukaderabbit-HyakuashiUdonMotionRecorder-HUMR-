@@ -12,7 +12,7 @@ Assets\HUMR\FBXs\DisplayName\の下にHumanoidAnimationが出力されます。
 
 v1.0(2021/02/07) リリース
 v1.1(2021/02/08) Quaternion補間が行われていない不具合を修正 
-v1.11(2021/02/09) TmpAniConへのパスの修正，clip名が空の時には適当な名前が付くように対応 
+v1.1.1(2021/02/09) TmpAniConへのパスの修正，clip名が空の時には適当な名前が付くように対応 
 
 
 MIT License
