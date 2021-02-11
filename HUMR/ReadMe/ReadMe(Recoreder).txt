@@ -7,6 +7,10 @@ Assets\HUMR\Prefabs\Recorder.prefabをワールドSceneのHierarchyに設置し�
 VRChatを終了するとC:\Users\username\AppData\LocalLow\VRChat\VRChat\の下にoutput_log_xx-xx-xx.txtが作成されます。
 これによってOutputLogLoaderを利用する準備が整いました。
 
+更新履歴
+
+v1.0(2021/02/07) リリース
+v1.1(2021/02/12) Interactで録画の停止・再開が行えるInteractRecorderを追加 
 
 
 MIT License
