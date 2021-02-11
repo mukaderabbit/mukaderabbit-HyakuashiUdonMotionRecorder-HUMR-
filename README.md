@@ -20,9 +20,12 @@ VRChat上での動きをHumanoidAnimationに出力します
 - HUMR_Recorder
   - ReadMe(Recorder).txt
   - Recorder.prefab
+  - InteractRecorder.prefab
   - SampleScene.scene
   - Recorder Udon C# Program Asset.asset
+  - InteractRecorder Udon C# Program Asset.asset
   - HUMR.Recorder.cs
+  - HUMR.InteractRecorder.cs
 - HUMR_OutputLogLoader
   - ReadMe(OutputLogLoader).txt
   - OutputLogLoader.cs
@@ -58,7 +61,15 @@ PackageManagerからFBXExporterをInstallしたのちに、OutputLogLoaderのuni
 
 Assets\HUMR\FBXs\DisplayName\の下にHumanoidAnimationが出力されます。
 
- 
+### 更新履歴
+
+v1.0(2021/02/07) リリース
+
+v1.1(2021/02/08) Quaternion補間が行われていない不具合を修正 
+
+v1.1.1(2021/02/09) TmpAniConへのパスの修正，clip名が空の時には適当な名前が付くように対応 
+
+v1.2(2021/02/12) ログファイル内に複数のレコードログが有った場合に分けて出力するように対応 Interactで録画の停止・再開が行えるInteractRecorderを追加 
 
 ### License
 
