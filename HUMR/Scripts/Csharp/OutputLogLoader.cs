@@ -106,7 +106,7 @@ namespace HUMR
             // Keyframeの生成
             if (nTargetCounter == 0)
             {
-                Debug.Log("Not exist Motion Data");
+                Debug.LogWarning("Not exist Motion Data with ["+ DisplayName + "] (Did you enter correct DisplayName ? or select correct log ?)");
                 return;
             }
 
@@ -157,10 +157,11 @@ namespace HUMR
                             {
                                 float key_time = float.Parse(strSplitedOutPutLog[0]);
                                 Vector3 rootScale = animator.transform.localScale;
+                                Vector3 armatureScale = animator.GetBoneTransform((HumanBodyBones)0).parent.localScale;
                                 Vector3 hippos = new Vector3(float.Parse(strSplitedOutPutLog[1]), float.Parse(strSplitedOutPutLog[2]), float.Parse(strSplitedOutPutLog[3]));
                                 transform.rotation = Quaternion.identity;//Avatarがrotation(0,0,0)でない可能性があるため
                                 hippos = Quaternion.Inverse(animator.GetBoneTransform((HumanBodyBones)0).parent.localRotation) * hippos;//armatureがrotation(0,0,0)でない可能性があるため
-                                hippos = new Vector3(hippos.x / rootScale.x, hippos.y / rootScale.y, hippos.z / rootScale.z); //いる？
+                                hippos = new Vector3(hippos.x / rootScale.x/ armatureScale.x, hippos.y / rootScale.y/ armatureScale.y, hippos.z / rootScale.z/ armatureScale.z); //いる？
                                 Keyframes[0][nTargetLineCounter] = new Keyframe(key_time, hippos.x);
                                 Keyframes[1][nTargetLineCounter] = new Keyframe(key_time, hippos.y);
                                 Keyframes[2][nTargetLineCounter] = new Keyframe(key_time, hippos.z);
@@ -241,7 +242,7 @@ namespace HUMR
                     string displaynameFolderPath = animFolderPath + "/" + DisplayName;
                     CreateDirectoryIfNotExist(displaynameFolderPath);
 
-                    string animationName = files[index].Substring(files[index].Length - 13).Remove(9)+"_"+i.ToString();//回数の番号いれるtodo
+                    string animationName = files[index].Substring(files[index].Length - 13).Remove(9)+"_"+i.ToString();
                     string animPath = displaynameFolderPath + "/" + animationName + ".anim";
                     Debug.Log(animPath);
 
