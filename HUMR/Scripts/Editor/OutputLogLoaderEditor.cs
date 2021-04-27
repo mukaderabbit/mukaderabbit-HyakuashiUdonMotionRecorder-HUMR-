@@ -1,4 +1,4 @@
-﻿
+
 /*******
  * OutputLogLoaderEditor.cs
  * 
@@ -28,12 +28,6 @@ namespace HUMR
 
         public override void OnInspectorGUI()
         {
-            string manifest = File.ReadAllText(@"Packages\manifest.json");
-            if (!manifest.Contains("com.unity.formats.fbx"))
-            {
-                EditorGUILayout.HelpBox("FBX Exporterのインストールが必要です\n\nUnity上部の[Window]タブを開き、[Package Manager]をクリック\n開かれたPackagesタブの上部にある[Advanced]をクリック➞[Show preview packages]を選択\nPackagesタブ左のリストに[FBX Exporter]が出てくるので選択、右上の[Install]をクリックしてください", MessageType.Warning, true);
-                return;
-            }
 
             //元のInspector部分を表示
             base.OnInspectorGUI();
