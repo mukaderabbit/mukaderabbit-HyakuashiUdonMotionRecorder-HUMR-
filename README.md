@@ -5,11 +5,11 @@ VRChat上での動きをHumanoidAnimationに出力します
 
 ### 確認済み動作環境
 
-* Unity 2018.4.20.f1
-* VRCSDK3-WORLD-2020.12.09.04.44_Public
-* UdonSharp_v0.19.0
-* FBX Exporter Version 3.2.1
-* VRChat 2020.1.2
+* Unity 2019.4.29.f1
+* VRCSDK3-WORLD-2021.08.04.15.07_Public
+* UdonSharp_v0.20.2
+* FBX Exporter Version 4.1.0
+* VRChat 2021.2.4
  
 
 ### ダウンロード
