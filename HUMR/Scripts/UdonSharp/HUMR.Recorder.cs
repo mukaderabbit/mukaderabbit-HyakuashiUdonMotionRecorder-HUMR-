@@ -1,4 +1,4 @@
-﻿
+
 /*******
  * Recorder.cs
  * 
@@ -17,7 +17,7 @@ namespace HUMR
     public class Recorder : UdonSharpBehaviour
     {
         [SerializeField,TooltipAttribute("チェックを入れるとワールド内の全ての人のモーションが記録されます（周知を推奨）")]
-        bool recordAllPlayer = false;
+        bool recordAllPlayers = false;
         [TooltipAttribute("記録毎に最低何秒間の間隔を空けるかの設定")]
         public float SecondsPerRecord = 0.1f;
 
@@ -39,7 +39,7 @@ namespace HUMR
         {
             if (time - beforetime > SecondsPerRecord)
             {
-                if (recordAllPlayer)
+                if (recordAllPlayers)
                 {
                     VRCPlayerApi.GetPlayers(players);
                 }
