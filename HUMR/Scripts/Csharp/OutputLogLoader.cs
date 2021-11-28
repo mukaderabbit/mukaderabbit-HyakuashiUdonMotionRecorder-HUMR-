@@ -161,7 +161,7 @@ namespace HUMR
                                 Vector3 hippos = new Vector3(float.Parse(strSplitedOutPutLog[1]), float.Parse(strSplitedOutPutLog[2]), float.Parse(strSplitedOutPutLog[3]));
                                 transform.rotation = Quaternion.identity;//Avatarがrotation(0,0,0)でない可能性があるため
                                 hippos = Quaternion.Inverse(animator.GetBoneTransform((HumanBodyBones)0).parent.localRotation) * hippos;//armatureがrotation(0,0,0)でない可能性があるため
-                                hippos = new Vector3(hippos.x / rootScale.x/ armatureScale.x, hippos.y / rootScale.y/ armatureScale.y, hippos.z / rootScale.z/ armatureScale.z); //いる？
+                                hippos = new Vector3(hippos.x / rootScale.x/ armatureScale.x, hippos.y / rootScale.y/ armatureScale.y, hippos.z / rootScale.z/ armatureScale.z); //いる
                                 Keyframes[0][nTargetLineCounter] = new Keyframe(key_time, hippos.x);
                                 Keyframes[1][nTargetLineCounter] = new Keyframe(key_time, hippos.y);
                                 Keyframes[2][nTargetLineCounter] = new Keyframe(key_time, hippos.z);
@@ -279,12 +279,25 @@ namespace HUMR
                 animator.runtimeAnimatorController = controller;
                 string exportFolderPath = humrPath + @"/FBXs";
                 CreateDirectoryIfNotExist(exportFolderPath);
-                string displaynameFBXFolderPath = exportFolderPath + "/" + DisplayName;
+                string displaynameFBXFolderPath = exportFolderPath + "/" + ValidName(DisplayName);
                 CreateDirectoryIfNotExist(displaynameFBXFolderPath);
                 UnityEditor.Formats.Fbx.Exporter.ModelExporter.ExportObject(displaynameFBXFolderPath + "/" + files[index].Substring(files[index].Length - 13).Remove(9), this.gameObject);
             }
         }
-        
+
+        //ファイル名やパスに使えない文字を‗に置換
+        string ValidName(string str)
+        {
+            string strValid = str;
+            char[] chInvalid = Path.GetInvalidFileNameChars();
+
+            foreach (char c in chInvalid)
+            {
+                strValid = strValid.Replace(c, '_');
+            }
+            return strValid;
+        }
+
         void ControllerSetUp(string humrPath)
         {
             string tmpAniConPath = humrPath + @"/AnimationController";
