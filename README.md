@@ -5,11 +5,11 @@ VRChat上での動きをHumanoidAnimationに出力します
 
 ### 確認済み動作環境
 
-* Unity 2019.4.29.f1
-* VRCSDK3-WORLD-2021.08.04.15.07_Public
-* UdonSharp_v0.20.2
-* FBX Exporter Version 4.1.0
-* VRChat 2021.2.4
+* Unity 2019.4.31f1
+* VRCSDK3-WORLD-2021.11.08.14.28_Public
+* UdonSharp_v0.20.3
+* FBX Exporter Version 4.1.2
+* VRChat 2021.4.1
  
 
 ### ダウンロード
@@ -72,6 +72,10 @@ v1.1.1(2021/02/09) TmpAniConへのパスの修正，clip名が空の時には適
 v1.2(2021/02/12) ログファイル内に複数のレコードログが有った場合に分けて出力するように対応 Interactで録画の停止・再開が行えるInteractRecorderを追加 
 
 v1.3(2021/04/27) ArmatureのScaleが(1,1,1)でないときに座標が正しく出力されない不具合を修正 ->OutputLogLoaderをv1.3に更新
+
+v1.3.1(2021/09/12) v1.3でunitypackageに反映が漏れていた修正を反映 ->OutputLogLoaderをv1.3.1に更新
+
+v1.3.2(2021/11/27) DisplayNameにファイルパスに使用できない文字を使用していた場合に対応 ->OutputLogLoaderをv1.3.1に更新　InteractRecorder.prefabのU#参照が外れていたのを修正,誤字を修正 ->Recorderをv1.1.1に更新
 
 ### トラブルシューティング　Q&A
 
