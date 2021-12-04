@@ -33,7 +33,8 @@ VRChat上での動きをHumanoidAnimationに出力します
   - HUMRImportFBXSettings
   
 ### 導入の手順（動画解説）
-   https://youtu.be/Q1HrIqOT-io
+   https://youtu.be/gUE8OJ9EQlo　（Unity2019.4.31f1）
+   https://youtu.be/Q1HrIqOT-io　（旧）
   
 ### 導入の手順(Recorder)
 
