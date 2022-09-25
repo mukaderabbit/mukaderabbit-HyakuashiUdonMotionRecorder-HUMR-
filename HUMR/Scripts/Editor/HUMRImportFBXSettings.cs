@@ -1,4 +1,4 @@
-﻿
+
 /*******
  * HUMRImportFBXSettings.cs
  * 
@@ -11,7 +11,7 @@
  * 上記の設定に関して不具合等が発生したらこのスクリプトを改造するか削除して対応のこと
  * 
  * *****/
-
+#if UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -72,3 +72,4 @@ namespace HUMR
 
     }
 }
+ #endif
