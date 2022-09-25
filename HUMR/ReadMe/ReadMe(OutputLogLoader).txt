@@ -1,9 +1,10 @@
 
 ### 導入の手順(OutputLogLoader)
 
-PackageManagerからFBXExporterをInstallしたのちに、OutputLogLoaderのunitypackageをImportしてください。
-レコードの際に使用したアバターprefabをHierarchyに移動させ、Assets\HUMR\Scripts\Csharp\OutputLogLoader.csをアタッチします。
-アニメーションを作成したい人のDisplayNameを打ち込み、最新(レコード時)のoutput_log_xx-xx-xx.txtの”_xx-xx-xx”を選択します。
+OutputLogLoaderのunitypackageをImportしてください。Packages以下に展開されます。
+レコードの際に使用したアバターprefabをHierarchyに移動させてください。
+Packages\HUMR_OutputLogLoader\Runtime\Scripts\Csharp\OutputLogLoader.csをアバターにアタッチします。
+アニメーションにする人のDisplayNameを打ち込み、最新(レコード時)のoutput_log_xx-xx-xx.txtの”_xx-xx-xx”を選択します。
 下にあるLoadLogToExportAnimと書かれたボタンを押します。
 Assets\HUMR\FBXs\DisplayName\の下にHumanoidAnimationが出力されます。
 
@@ -13,7 +14,7 @@ Assets\HUMR\FBXs\DisplayName\の下にHumanoidAnimationが出力されます。
 	Q.Importしたら'TMPro','Chinemachine','Formats'等が書かれたErrorが表示されます
 
 	A.PackageManagerのパッケージが正しく認識されていないようです。
-	　FBXExporter等がinstallされていることをご確認の後、
+	　Packages以下にFBXExporter等がinstallされていることをご確認の後、
 	　下記添付のトラブルシューティング ・認識されないパッケージ(パッケージが認識されない)の項目に記載されている内容を試してみていただけると幸いです。
 	　https://docs.unity3d.com/ja/2019.4/Manual/upm-errors.html
 
@@ -50,7 +51,10 @@ v1.1(2021/02/08) Quaternion補間が行われていない不具合を修正
 v1.1.1(2021/02/09) TmpAniConへのパスの修正，clip名が空の時には適当な名前が付くように対応 
 v1.2(2021/02/12) ログファイル内に複数のレコードログが有った場合に分けて出力するように対応 
 v1.3(2021/04/27) ArmatureのScaleが(1,1,1)でないときに座標が正しく出力されない不具合を修正
+v1.3.1(2021/09/12) v1.3でunitypackageに反映が漏れていた修正を反映
+v1.3.2(2021/11/27) DisplayNameにファイルパスに使用できない文字を使用していた場合に対応
 
+VCC_v1.0.0(2022/09/22) VCCに合わせて記載やフォルダ構造等を変更。
 
 MIT License
 
