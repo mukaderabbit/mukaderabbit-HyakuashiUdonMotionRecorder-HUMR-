@@ -1,7 +1,7 @@
 
 ### 導入の手順(Recorder)
 
-VRCSDK3-WorldとUdonSharpをImportしたのちに、RecorderのunitypackageをImportしてください。
+VCCのVRCSDK3-WorldとUdonSharpをAddしたのちに、RecorderのunitypackageをImportしてください。
 Assets\HUMR\Prefabs\Recorder.prefabをワールドSceneのHierarchyに設置してください。
 そのワールドをアップロード(またはLocalTest)してワールドに入りログを残します。
 VRChatを終了するとC:\Users\username\AppData\LocalLow\VRChat\VRChat\の下にoutput_log_xx-xx-xx.txtが作成されます。
@@ -11,6 +11,9 @@ VRChatを終了するとC:\Users\username\AppData\LocalLow\VRChat\VRChat\の下�
 
 v1.0(2021/02/07) リリース
 v1.1(2021/02/12) Interactで録画の停止・再開が行えるInteractRecorderを追加 
+v1.1.1(2021/11/27) InteractRecorder.prefabのU#参照が外れていたのを修正,誤字を修正 
+
+VCC_v1.0.0(2022/09/22) VCC(U#1.0以上)向けに対応
 
 
 MIT License
