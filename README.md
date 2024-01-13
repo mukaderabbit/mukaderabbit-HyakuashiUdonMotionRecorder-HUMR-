@@ -20,7 +20,7 @@ Outputs movements in VRChat as Humanoid Animation.
 Confirmed Operating Environment:
 HUMR_VCC_v1.0.0 (New)
 
-- Unity (Installed from VRChat Creator Companion): 2022 World Project template
+- Unity ver 2022.3.6f1 (Installed from VRChat Creator Companion): 2022 World Project template
 - VRChat SDK - World version 3.5.0
 - VRChat Package Resolver Tool version 0.1.27
 - VRChat SDK - Base 3.5.0
@@ -59,6 +59,6 @@ Import the OutputLogLoader unitypackage. It will expand under Packages. Move the
 
 ## Contributing
 
-- **Fukuoka Digital Spinning** - *Updated to recent version and English support* - [DavideRiccitiello](https://github.com/DavideRiccitiello)
+- **Fukuoka Digital Spinning** - *Updated to recent Unity 2022 version and English support* - [DavideRiccitiello](https://github.com/DavideRiccitiello)
 
 
