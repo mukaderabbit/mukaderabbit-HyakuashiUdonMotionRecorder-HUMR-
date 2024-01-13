@@ -44,6 +44,10 @@ HUMR_VCC_v1.0.0 (New)
 
 Installation Procedure (Video Tutorial):
 
+https://youtu.be/gUE8OJ9EQlo　（Unity2019.4.31f1）
+
+https://youtu.be/Q1HrIqOT-io　（旧）
+
 Unity 2019.4.31f1 (New)
 Old Version
 Installation Procedure (Recorder) – New:
