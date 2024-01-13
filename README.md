@@ -6,7 +6,7 @@
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details. The original HyakuashiUdonMotionRecorder-HUMR project by mukaderabbit is licensed under the MIT License.
 
-# MotionCapture-FromVRChat-ToUnity
+# MotionCapture-FromVRChat-ToUnity updated to version 2022 
 
 This Unity project is designed to record VR movement in VRChat, utilizing the latest VRChat SDK from the VRChat Creator Companion. It captures the user's movements within the VRChat environment, making it an essential tool for VR enthusiasts and content creators. Vive trackers or other compatible tracking devices for converting a Json file automatically generated from the world .
 
