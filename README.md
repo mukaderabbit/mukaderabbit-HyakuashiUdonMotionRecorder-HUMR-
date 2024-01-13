@@ -13,8 +13,7 @@ This Unity project is designed to record VR movement in VRChat, utilizing the la
 The intent of this Github page is to create awareness in the western world. 
 
 
-
-
+## Requirements
 Outputs movements in VRChat as Humanoid Animation.
 
 Confirmed Operating Environment:
