@@ -20,27 +20,28 @@ Outputs movements in VRChat as Humanoid Animation.
 Confirmed Operating Environment:
 HUMR_VCC_v1.0.0 (New)
 
-Unity (Installed from VRChat Creator Companion): 2022 World Project template
-VRChat SDK - World version 3.5.0
-VRChat Package Resolver Tool version 0.1.27
-VRChat SDK - Base 3.5.0
-Contents:
+- Unity (Installed from VRChat Creator Companion): 2022 World Project template
+- VRChat SDK - World version 3.5.0
+- VRChat Package Resolver Tool version 0.1.27
+- VRChat SDK - Base 3.5.0
 
-HUMR_Recorder
-ReadMe (Recorder).txt
-Recorder.prefab
-InteractRecorder.prefab
-SampleScene.scene
-Recorder Udon C# Program Asset.asset
-InteractRecorder Udon C# Program Asset.asset
-HUMR.Recorder.cs
-HUMR.InteractRecorder.cs
-HUMR_OutputLogLoader:
+# Contents:
 
-ReadMe (OutputLogLoader).txt
-OutputLogLoader.cs
-OutputLogLoaderEditor.cs
-HUMRImportFBXSettings
+- HUMR_Recorder
+- ReadMe (Recorder).txt
+- Recorder.prefab
+- InteractRecorder.prefab
+- SampleScene.scene
+- Recorder Udon C# Program Asset.asset
+- InteractRecorder Udon C# Program Asset.asset
+- HUMR.Recorder.cs
+- HUMR.InteractRecorder.cs
+- HUMR_OutputLogLoader:
+
+- ReadMe (OutputLogLoader).txt
+- OutputLogLoader.cs
+- OutputLogLoaderEditor.cs
+- HUMRImportFBXSettings
 
 Installation Procedure (Video Tutorial):
 
