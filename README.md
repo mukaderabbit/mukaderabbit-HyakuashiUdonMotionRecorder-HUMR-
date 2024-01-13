@@ -48,30 +48,6 @@ https://youtu.be/gUE8OJ9EQlo　（Unity2019.4.31f1）
 
 https://youtu.be/Q1HrIqOT-io　（旧）
 
-Unity 2019.4.31f1 (New)
-Old Version
-Installation Procedure (Recorder) – New:
-After adding VRCSDK3-World and UdonSharp from VCC, import the Recorder's unitypackage. Place the Assets\HUMR\Prefabs\Recorder.prefab in the World Scene Hierarchy. Upload the world (or LocalTest) and enter the world to leave a log. When VRChat closes, output_log_xx-xx-xx.txt is created under C:\Users\username\AppData\LocalLow\VRChat\VRChat. This prepares you to use the OutputLogLoader.
-
-Installation Procedure (OutputLogLoader) – New:
-Import the OutputLogLoader unitypackage. It will expand under Packages. Move the avatar prefab used during recording to Hierarchy. Attach Packages\HUMR_OutputLogLoader\Runtime\Scripts\Csharp\OutputLogLoader.cs to the avatar. Enter the DisplayName of the person you want to animate, select the "_xx-xx-xx" from the latest output_log_xx-xx-xx.txt (recorded time). Press the LoadLogToExportAnim button below. HumanoidAnimation is output under Assets\HUMR\FBXs\DisplayName.
-
-Installation Procedure (Recorder) - Previous Version
-
-After importing VRCSDK3-World and UdonSharp, import the Recorder unitypackage.
-Place the Assets\HUMR\Prefabs\Recorder.prefab in the hierarchy of your world scene.
-Upload the world (or perform a Local Test) and enter the world to record logs.
-Upon exiting VRChat, an output_log_xx-xx-xx.txt file will be created in C:\Users\username\AppData\LocalLow\VRChat\VRChat\.
-This step prepares you to use the OutputLogLoader.
-Installation Procedure (OutputLogLoader) - Previous Version
-
-Install FBXExporter from the PackageManager, then import the OutputLogLoader unitypackage.
-Move the avatar prefab used during recording to the hierarchy.
-Attach Assets\HUMR\Scripts\Csharp\OutputLogLoader.cs.
-Enter the DisplayName of the person for whom you want to create animations, and select the "_xx-xx-xx" part from the latest (at the time of recording) output_log_xx-xx-xx.txt.
-Click the button labeled LoadLogToExportAnim.
-A HumanoidAnimation will be outputted under Assets\HUMR\FBXs\DisplayName\.
-
 ## Authors
 
 - **mukaderabbit** - *Initial work on HyakuashiUdonMotionRecorder-HUMR* - [mukaderabbit-HyakuashiUdonMotionRecorder-HUMR](https://github.com/mukaderabbit/mukaderabbit-HyakuashiUdonMotionRecorder-HUMR-)
