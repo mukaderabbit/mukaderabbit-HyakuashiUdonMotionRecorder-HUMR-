@@ -53,18 +53,12 @@ After adding VRCSDK3-World and UdonSharp from VCC, import the Recorder's unitypa
 Installation Procedure (OutputLogLoader) – New:
 Import the OutputLogLoader unitypackage. It will expand under Packages. Move the avatar prefab used during recording to Hierarchy. Attach Packages\HUMR_OutputLogLoader\Runtime\Scripts\Csharp\OutputLogLoader.cs to the avatar. Enter the DisplayName of the person you want to animate, select the "_xx-xx-xx" from the latest output_log_xx-xx-xx.txt (recorded time). Press the LoadLogToExportAnim button below. HumanoidAnimation is output under Assets\HUMR\FBXs\DisplayName.
 
-## Contributing
-
-Please read [CONTRIBUTING.md](link-to-your-contributing-file) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](link-to-your-tags).
-
 ## Authors
 
 - **mukaderabbit** - *Initial work on HyakuashiUdonMotionRecorder-HUMR* - [mukaderabbit-HyakuashiUdonMotionRecorder-HUMR](https://github.com/mukaderabbit/mukaderabbit-HyakuashiUdonMotionRecorder-HUMR-)
-- **Davide Riccitiello** - *Updated to recent version and English support* - [DavideRiccitiello](https://github.com/DavideRiccitiello)
+
+## Contributing
+
+- **Fukuoka Digital Spinning** - *Updated to recent version and English support* - [DavideRiccitiello](https://github.com/DavideRiccitiello)
 
 
-See also the list of [contributors](link-to-contributors-page) who participated in this project.
