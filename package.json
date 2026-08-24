@@ -1,0 +1,33 @@
+{
+  "name": "mukaderabbit.humr",
+  "displayName": "Hyakuashi Udon Motion Recorder",
+  "version": "2.0.0-beta.2",
+  "description": "HUMR is a motion capture tool that records player's movements into the VRChat log files and then reads them in a VRChat world project. This is version 2.0.0, which uses a new log format.",  
+  "author": {
+    "name": "mukaderabbit",
+    "url": "https://github.com/mukaderabbit/mukaderabbit-HyakuashiUdonMotionRecorder-HUMR-"
+  },
+  "legacyFolders": {
+    "Assets\\HUMR\\Prefabs": "a9daba3508e40b842b5213e24a43c417",
+    "Assets\\HUMR\\ReadMe": "d1bf393c3e46e554d963a2c0d6d4df74",
+    "Assets\\HUMR\\Scenes": "a6fa368aafb93394288d55085c8b1022",
+    "Assets\\HUMR\\Scripts": "78b965b503bad07419b69b59ca9b0330"
+  },
+  "legacyPackages": [
+    "humr.outputlogloader"
+  ],
+  "unity": "2022.3",
+  "dependencies": {
+    "com.unity.formats.fbx": "4.2.1"
+  },
+  "vpmDependencies": {
+  },
+  "license": "MIT",
+  "samples": [
+    {
+      "displayName": "HUMR Sample World",
+      "description": "A scene with a HumrPlayerRecorder prefab and HumrRecordingLoader script. Requires the VRChat World SDK.",
+      "path": "Samples~/HumrSampleWorld"
+    }
+  ]
+}

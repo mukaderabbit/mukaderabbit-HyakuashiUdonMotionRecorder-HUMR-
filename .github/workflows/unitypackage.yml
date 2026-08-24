@@ -1,0 +1,43 @@
+name: Build .unitypackage
+
+on: 
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+
+      - name: Read package.json & Set Environment Variables
+        run: |
+          PACKAGE_NAME=$(jq -r '.name' package.json)
+          PACKAGE_VERSION=$(jq -r '.version' package.json)
+          
+          echo "packageName=$PACKAGE_NAME" >> $GITHUB_ENV
+          echo "unityPackage=${PACKAGE_NAME}-${PACKAGE_VERSION}.unitypackage" >> $GITHUB_ENV
+      
+      - name: Make Package Folder
+        run: |
+          mkdir Packages
+          mkdir Packages/${{ env.packageName }}
+          ls | grep -v Packages | xargs mv -t Packages/${{ env.packageName }}
+              
+      - name: Track Package Meta Files
+        run: find "Packages/${{ env.packageName }}/" -name \*.meta >> metaList
+
+      - name: Create UnityPackage
+        uses: pCYSl5EDgo/create-unitypackage@b5c57408698b1fab8b3a84d4b67f767b8b7c0be9
+        with:
+          package-path: ${{ env.unityPackage }}
+          include-files: metaList
+          
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          archive: false
+          path: ${{ env.unityPackage }}

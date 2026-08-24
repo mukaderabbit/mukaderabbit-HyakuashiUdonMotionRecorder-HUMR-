@@ -1,0 +1,19 @@
+{
+    "name": "Humr.Editor",
+    "rootNamespace": "Humr.Editor",
+    "references": [
+        "GUID:4156b7325025f45479ad99b85e7efd7c",
+        "GUID:0f9e8f73c69964f1e8176f9a0b86f9b2"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
